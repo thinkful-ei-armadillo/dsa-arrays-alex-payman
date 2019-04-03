@@ -48,7 +48,7 @@ function main() {
 
 //5. urlify
 
-
+//==========================================
 //drill 5 , big o(n)
 function replaceSpace(str) {
   let newStr = '';
@@ -64,7 +64,11 @@ function replaceSpace(str) {
 }
 
 // console.log(replaceSpace('tauhida parveen'));
+// console.log(replaceSpace('asd dfcxd')); expects: asd%20dfcxd
 
+// O(N), doesn't need to be optimized
+
+//==========================================
 //drill 6
 function filter(arr) {
   let newArr = [];
@@ -76,7 +80,12 @@ function filter(arr) {
   return newArr;
 }
 // console.log(filter([0, 1, 8, 9, 10, 12, 6, 4]));
+// console.log(filter([0, 2, 4, 7, 9])); expects [7,9];
 
+// O(N), doesn't need to be optimized.
+
+
+//==========================================
 //drill 7
 
 function maxSum(arr) {
@@ -94,7 +103,11 @@ function maxSum(arr) {
   return maxSum;
 }
 // console.log(maxSum([4, 6, -3, 5, -30, 8, 12]));
+// console.log(maxSum([8, 9, -2 ,5 , -4])); expects 17;
 
+// O(N), doesn't need to be optimized 
+
+//==========================================
 //drill 8 bigO(n);
 
 function mergeArr(arr1, arr2) {
@@ -118,6 +131,11 @@ function mergeArr(arr1, arr2) {
 /*Input:[1, 3, 6, 8, 11] and [2, 3, 5, 8, 9, 10]
 Output:[1, 2, 3, 3, 5, 6, 8, 8, 9, 10, 11]*/
 
+// O(N), could be optimized where its not looping over undefined indexes if one array is longer, negligable diff
+
+//==========================================
+//drill 9
+
 function removeCharacters(str, filter) {
   let newStr = '';
   for (let i = 0; i < str.length; i++) {
@@ -130,6 +148,12 @@ function removeCharacters(str, filter) {
 }
 
 // console.log(removeCharacters('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'));
+// console.log(removeCharacters('This sentence has a bunch of vowels', 'a)); expects 'This sentence hs  bunch of vowels'
+
+// O(N). Technically O(N times filter size). 
+
+//==========================================
+//drill 10
 
 function products(arr) {
   let result = 1;
@@ -143,9 +167,13 @@ function products(arr) {
 
 // console.log(products([1,3,9,4]));
 
+// O(N). Technically O(2N). 
+
+//==========================================
+//drill 11
+
 function map2dArray(arr) {
   let mappedArr = [];
-
   let changeCol = [];
   //for each row
   for (let row = 0; row < arr.length; row++) {
@@ -174,6 +202,11 @@ function map2dArray(arr) {
   return mappedArr;
 }
 
+//O(n^2) poly. Could use optimization.
+
+//==========================================
+//drill 12
+
 function stringRotation(str1, str2) {
   for (let i = 0; i < str2.length; i++) {
     if (str2[i] === str1[0]) {
@@ -189,3 +222,5 @@ function stringRotation(str1, str2) {
 
 // console.log(stringRotation('amazon','azonma'));
 // console.log(stringRotation('amazon','azonam'));
+
+// Worst case O(n^2). Best case: O(N). 
